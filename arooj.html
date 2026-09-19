@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arooj Organics Hair Vibe - گرتے اور سفید بالوں کا مستقل حل</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Noto Nastaliq Urdu & Noto Sans Arabic for crisp readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#16a34a',
+              600: '#15803d',
+              700: '#166534',
+              800: '#14532d',
+              900: '#052e16',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            },
+            whatsapp: {
+              DEFAULT: '#25D366',
+              dark: '#128C7E',
+              darker: '#075E54'
+            }
+          },
+          fontFamily: {
+            nastaliq: ['"Noto Nastaliq Urdu"', 'serif'],
+            arabic: ['"Noto Sans Arabic"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Noto Sans Arabic', 'Noto Nastaliq Urdu', sans-serif;
+      overflow-x: hidden;
+      background-color: #fbfbf9;
+      color: #1a202c;
+    }
+
+    .nastaliq-title {
+      font-family: 'Noto Nastaliq Urdu', serif;
+      line-height: 2.1;
+    }
+
+    /* Pulsing notification animation */
+    @keyframes pulseSoft {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .pulse-btn {
+      animation: pulseSoft 2.2s infinite ease-in-out;
+    }
+
+    /* Floating order toast animation */
+    @keyframes slideIn {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .slide-in-toast {
+      animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Shimmer effect for limited deal badge */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .shimmer-badge {
+      background: linear-gradient(90deg, #15803d 0%, #22c55e 50%, #15803d 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#faf9f5] text-slate-800 antialiased selection:bg-emerald-200">
+
+  <!-- Top Urgency Notice Bar -->
+  <div class="bg-red-700 text-white text-xs md:text-sm py-2 px-3 text-center font-bold tracking-wide shadow-md flex items-center justify-center gap-2">
+    <span class="inline-block w-2.5 h-2.5 rounded-full bg-yellow-300 animate-ping"></span>
+    <span>خصوصی ڈسکاؤنٹ آفر: صرف آج کے لیے 40% رعایت اور پورے پاکستان میں بالکل مفت ہوم ڈیلیوری!</span>
+  </div>
+
+  <!-- Main Top Brand Header -->
+  <header class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-stone-200 shadow-sm">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-full bg-emerald-700 flex items-center justify-center text-white shadow-inner font-black text-xl">
+          🌿
+        </div>
+        <div>
+          <h1 class="font-black text-lg md:text-xl text-emerald-950 leading-tight tracking-wide font-sans">Arooj Organics</h1>
+          <p class="text-xs text-emerald-700 font-semibold">Hair Vibe 100% آرگینک فارمولا — 260ml بڑی بوتل</p>
+        </div>
+      </div>
+      
+      <!-- COD Trust Badge in Header -->
+      <div class="flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl">
+        <svg class="w-5 h-5 text-emerald-700 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+        <div class="text-right">
+          <span class="block text-xs font-bold text-emerald-900 leading-none">کیش آن ڈیلیوری</span>
+          <span class="text-[10px] text-emerald-700">پارسل چیک کر کے پیسے دیں</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 pt-6 pb-28">
+
+    <!-- Psychological Hook / Pain Point Header -->
+    <section class="text-center mb-8">
+      <div class="inline-flex items-center gap-1.5 bg-red-100 border border-red-300 text-red-700 text-xs md:text-sm font-extrabold px-4 py-1.5 rounded-full mb-4">
+        <span>⚠️</span>
+        <span>کیا آپ کے بال تیزی سے گر رہے ہیں اور وقت سے پہلے سفید ہو رہے ہیں؟</span>
+      </div>
+
+      <h2 class="text-2xl md:text-4xl font-black text-slate-900 leading-snug md:leading-normal mb-4">
+        پہلے یہ سمجھیں کہ بالوں کی <span class="text-red-600 underline decoration-wavy decoration-red-400">اصل بیماری</span> کیا ہے…
+      </h2>
+
+      <p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+        اکثر لوگ مہنگے شیمپو، سیرم اور بازار کے کیمیکل والے تیل استعمال کرتے ہیں، لیکن نتیجہ صفر نکلتا ہے۔ <strong class="text-slate-900">آخر کیوں؟</strong>
+      </p>
+    </section>
+
+    <!-- Creative Product Showcase Card -->
+    <div class="bg-gradient-to-b from-emerald-900 via-emerald-800 to-stone-900 rounded-3xl p-6 md:p-8 text-white shadow-2xl relative overflow-hidden mb-10 border-2 border-emerald-600/40">
+      
+      <!-- Subtle Decorative Leaves Background -->
+      <div class="absolute -top-12 -left-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Badge -->
+      <div class="flex justify-between items-center mb-6">
+        <span class="bg-amber-400 text-emerald-950 font-black text-xs md:text-sm px-3.5 py-1.5 rounded-full shadow-lg">
+          ★ Arooj Organics Hair Vibe — 100% اوریجنل
+        </span>
+        <span class="text-xs bg-emerald-950/70 text-emerald-200 border border-emerald-500/30 px-3 py-1 rounded-full">
+          آملہ اور نیم کے قدرتی نچوڑ کے ساتھ
+        </span>
+      </div>
+
+      <!-- Product Bottle Illustration and Benefits -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <!-- Official Product Photo Showcase -->
+        <div class="md:col-span-5 flex flex-col items-center justify-center">
+          <div class="relative w-full max-w-[260px] md:max-w-[280px] rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/40 bg-stone-900 min-h-[360px] flex items-center justify-center group">
+            
+            <!-- Real Product Image from Google Drive -->
+            <img id="productMainImg" 
+                 src="https://lh3.googleusercontent.com/d/1yQa8BAJVS1pKPUtta_LgHzPOf1F6TraN" 
+                 alt="Arooj Organics Hair Vibe 100% Organic Hair Oil Bottle and Box" 
+                 loading="eager"
+                 referrerpolicy="no-referrer"
+                 onerror="this.onerror=null; this.src='https://drive.google.com/uc?export=view&id=1yQa8BAJVS1pKPUtta_LgHzPOf1F6TraN';"
+                 class="w-full h-full object-cover object-center rounded-2xl transform group-hover:scale-105 transition-transform duration-500">
+
+            <!-- Floating Discount / Organic Badge on Image -->
+            <div class="absolute top-3 right-3 bg-amber-400 text-emerald-950 font-black text-[11px] md:text-xs px-2.5 py-1 rounded-full shadow-md z-10">
+              100% Organic
+            </div>
+
+            <!-- Volume Tag -->
+            <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-sm text-yellow-300 font-bold text-[11px] px-2.5 py-1 rounded-lg border border-yellow-400/30 z-10">
+              بڑی بوتل (260ml)
+            </div>
+          </div>
+          <span class="text-xs text-emerald-200/90 mt-2.5 font-medium flex items-center gap-1.5 text-center">
+            <span>✨</span>
+            <span>Arooj Organics Hair Vibe — معیاری پیکنگ اور سیل پیک بوتل</span>
+          </span>
+        </div>
+
+        <!-- Quick Summary Bullets -->
+        <div class="md:col-span-7 space-y-3">
+          <div class="inline-block bg-emerald-700/60 border border-emerald-400/30 text-emerald-200 text-xs px-3 py-1 rounded-lg font-semibold">
+            طبیعی اور سائنسی طور پر تصدیق شدہ
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold text-yellow-300">
+            Arooj Organics Hair Vibe — 7 سے 10 دنوں میں نمایاں نتائج!
+          </h3>
+          <p class="text-sm text-stone-200 leading-relaxed">
+            قدرتی آملہ، نیم، سکاکائی اور نباتاتی اجزاء کا شاہکار فارمولا جو بالوں کے گرنے کو فوری روکے، جڑوں کو مضبوط کرے اور خشکی و سکری کا مکمل خاتمہ کرے۔
+          </p>
+
+          <div class="pt-2 grid grid-cols-2 gap-2 text-xs font-bold">
+            <div class="bg-black/25 border border-white/10 p-2.5 rounded-xl flex items-center gap-2">
+              <span class="text-emerald-400 text-base">✓</span>
+              <span>Stronger Hair & Scalp</span>
+            </div>
+            <div class="bg-black/25 border border-white/10 p-2.5 rounded-xl flex items-center gap-2">
+              <span class="text-emerald-400 text-base">✓</span>
+              <span>Longer & Shinier Hair</span>
+            </div>
+            <div class="bg-black/25 border border-white/10 p-2.5 rounded-xl flex items-center gap-2">
+              <span class="text-emerald-400 text-base">✓</span>
+              <span>Anti Dandruff فارمولا</span>
+            </div>
+            <div class="bg-black/25 border border-white/10 p-2.5 rounded-xl flex items-center gap-2">
+              <span class="text-emerald-400 text-base">✓</span>
+              <span>قدرتی میلانن کی بحالی</span>
+            </div>
+          </div>
+
+          <!-- Fast CTA button within hero -->
+          <div class="pt-4">
+            <a href="#order-section" class="w-full block text-center bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 hover:from-yellow-300 hover:to-amber-400 text-slate-950 font-black py-3.5 px-6 rounded-2xl shadow-xl transition-all duration-200 transform active:scale-95 text-base md:text-lg">
+              ابھی رعایتی قیمت پر آرڈر کریں (کیش آن ڈیلیوری) 🛒
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Educational Scientific Section: 3 Core Reasons -->
+    <section class="mb-12">
+      <div class="text-center mb-8">
+        <span class="text-emerald-800 font-bold text-xs uppercase tracking-wider bg-emerald-100 px-3 py-1 rounded-full">سائنسی تحقیق کی روشنی میں</span>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2">
+          بال کیوں کمزور ہو کر گرتے اور سفید ہوتے ہیں؟
+        </h3>
+        <p class="text-slate-600 text-sm mt-1">جب تک آپ اصل وجہ حل نہیں کریں گے، کوئی شیمپو فائدہ نہیں دے گا:</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <!-- Reason 1 -->
+        <div class="bg-white rounded-2xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-2xl mb-4 border border-amber-200">
+            🧬
+          </div>
+          <span class="text-xs font-black text-amber-700 uppercase tracking-widest block mb-1">وجہ نمبر 1</span>
+          <h4 class="font-extrabold text-lg text-slate-900 mb-2">پروٹین (Keratin) کی کمی</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            بالوں کی ساخت <strong class="text-slate-900">85% سے زیادہ کیراٹن</strong> (قدرتی پروٹین) سے بنتی ہے۔ کیمیکلز، شیمپوز اور آلودگی سے کھوپڑی (Scalp) کی پروٹین ختم ہو جاتی ہے، جس سے بال جڑ سے کمزور ہو کر گرنے لگتے ہیں۔
+          </p>
+        </div>
+
+        <!-- Reason 2 -->
+        <div class="bg-white rounded-2xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold text-2xl mb-4 border border-rose-200">
+            🌑
+          </div>
+          <span class="text-xs font-black text-rose-700 uppercase tracking-widest block mb-1">وجہ نمبر 2</span>
+          <h4 class="font-extrabold text-lg text-slate-900 mb-2">میلانن (Melanin) کا رک جانا</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            بالوں کو قدرتی سیاہ رنگ دینے والا جزو <strong class="text-slate-900">"میلانن"</strong> ہے۔ جب بالوں کی جڑوں کو خالص قدرتی خوراک نہیں ملتی، تو میلانن پیدا ہونا بند ہو جاتا ہے اور بال وقت سے پہلے سفید ہونے لگتے ہیں۔
+          </p>
+        </div>
+
+        <!-- Reason 3 -->
+        <div class="bg-white rounded-2xl p-5 border border-stone-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center font-bold text-2xl mb-4 border border-red-200">
+            ☠️
+          </div>
+          <span class="text-xs font-black text-red-700 uppercase tracking-widest block mb-1">وجہ نمبر 3</span>
+          <h4 class="font-extrabold text-lg text-slate-900 mb-2">کیمیکل ہیئر کلر اور ڈائی کا نقصان</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            مصنوعی ہیئر ڈائی وقتی طور پر بال سیاہ کرتے ہیں مگر اندر سے بالوں کے فولیکلز (جڑوں) کو جلا دیتے ہیں۔ اس کے نتیجے میں بال تیزی سے پتلے، روکھے اور مستقل سفید ہونے لگتے ہیں۔
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- The Natural Solution & How It Works -->
+    <section class="bg-white rounded-3xl p-6 md:p-8 border border-emerald-200 shadow-lg mb-12">
+      <div class="border-b border-stone-100 pb-5 mb-6 text-center">
+        <span class="text-emerald-700 bg-emerald-50 text-xs font-black px-4 py-1.5 rounded-full border border-emerald-200 inline-block mb-2">
+          قدرتی اور مستقل حل
+        </span>
+        <h3 class="text-2xl md:text-3xl font-black text-emerald-950">
+          عروج آرگینکس (Arooj Organics Hair Vibe) آپ کے بالوں پر کیسے کام کرتا ہے؟
+        </h3>
+        <p class="text-sm text-slate-600 mt-2 max-w-xl mx-auto">
+          ہم نے روایتی جڑی بوٹیوں کے نچوڑ اور خالص نباتاتی تیلوں کو ایک خاص سائنسی تناسب کے ساتھ تیار کیا ہے، جو کھوپڑی کی اندرونی تہہ تک جذب ہوتا ہے۔
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Step 1 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100">
+          <div class="w-10 h-10 rounded-xl bg-emerald-700 text-white flex-shrink-0 flex items-center justify-center font-black text-lg shadow-sm">
+            ۱
+          </div>
+          <div>
+            <h4 class="font-extrabold text-base md:text-lg text-emerald-950">جڑوں میں قدرتی پروٹین کی بحالی</h4>
+            <p class="text-sm text-slate-700 mt-1 leading-relaxed">
+              یہ تیل فوری طور پر جڑوں میں جذب ہو کر بالوں کو درکار پروٹین (Keratin) فراہم کرتا ہے، جس سے کمزور اور بے جان بالوں میں نئی مضبوطی اور لچک پیدا ہوتی ہے۔
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100">
+          <div class="w-10 h-10 rounded-xl bg-emerald-700 text-white flex-shrink-0 flex items-center justify-center font-black text-lg shadow-sm">
+            ۲
+          </div>
+          <div>
+            <h4 class="font-extrabold text-base md:text-lg text-emerald-950">ہیئر فال کا فوری خاتمہ (پہلے 7 سے 10 دنوں میں)</h4>
+            <p class="text-sm text-slate-700 mt-1 leading-relaxed">
+              کھوپڑی کے کمزور مساموں کو مضبوط بنا کر پہلے ہفتے کے اندر ہی بالوں کے ٹوٹنے اور کنگھی میں بال آنے کا عمل 90% تک روک دیتا ہے۔
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100">
+          <div class="w-10 h-10 rounded-xl bg-emerald-700 text-white flex-shrink-0 flex items-center justify-center font-black text-lg shadow-sm">
+            ۳
+          </div>
+          <div>
+            <h4 class="font-extrabold text-base md:text-lg text-emerald-950">سوئے ہوئے ہیئر فولیکلز کی بیداری اور لمبائی</h4>
+            <p class="text-sm text-slate-700 mt-1 leading-relaxed">
+              کھوپڑی میں خون کی گردش (Blood Circulation) کو بڑھا کر رکے ہوئے ہیئر فولیکلز کو ایکٹیو کرتا ہے، جس سے نئے بال اگتے ہیں اور بال گھنے و لمبے ہوتے ہیں۔
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100">
+          <div class="w-10 h-10 rounded-xl bg-emerald-700 text-white flex-shrink-0 flex items-center justify-center font-black text-lg shadow-sm">
+            ۴
+          </div>
+          <div>
+            <h4 class="font-extrabold text-base md:text-lg text-emerald-950">سفید بالوں کا قدرتی علاج (میلانن ایکٹیویشن)</h4>
+            <p class="text-sm text-slate-700 mt-1 leading-relaxed">
+              یہ کوئی وقتی کیمیکل ڈائی یا مصنوعی رنگ نہیں ہے۔ یہ جڑوں میں میلانن سیلز کو خوراک دے کر دوبارہ متحرک کرتا ہے تاکہ نئے بال اپنے اصل، قدرتی سیاہ رنگ میں نکلیں۔
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Trust & Quality Guarantee Badges -->
+    <section class="bg-gradient-to-r from-stone-900 to-slate-900 text-white rounded-3xl p-6 md:p-8 mb-12 shadow-xl border border-stone-700">
+      <div class="text-center mb-6">
+        <h3 class="text-xl md:text-2xl font-black text-yellow-400">ہماری خاص خصوصیات اور گارنٹی</h3>
+        <p class="text-xs md:text-sm text-stone-300 mt-1">آپ کا اعتماد ہماری سب سے بڑی ترجیح ہے</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+        <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+          <div class="text-3xl mb-2">🌿</div>
+          <h4 class="font-bold text-base text-emerald-300">100% کیمیکل فری</h4>
+          <p class="text-xs text-stone-300 mt-1">نہ کوئی منرل آئل، نہ سلفیٹ، نہ پیرا بین اور نہ کوئی خطرناک کیمیکل۔</p>
+        </div>
+
+        <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+          <div class="text-3xl mb-2">👫</div>
+          <h4 class="font-bold text-base text-yellow-300">مرد و خواتین دونوں کے لیے</h4>
+          <p class="text-xs text-stone-300 mt-1">سر کے بالوں کے ساتھ ساتھ مرد حضرات کی داڑھی کے خالی پیچز کے لیے یکساں آزمودہ۔</p>
+        </div>
+
+        <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+          <div class="text-3xl mb-2">🛡️</div>
+          <h4 class="font-bold text-base text-emerald-300">صفر سائیڈ ایفیکٹ</h4>
+          <p class="text-xs text-stone-300 mt-1">خالص دیسی جڑی بوٹیوں سے تیار کردہ، حساس جلد والے افراد کے لیے بھی مکمل محفوظ۔</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof & Customer Reviews from Pakistani Cities -->
+    <section class="mb-12">
+      <div class="text-center mb-6">
+        <span class="text-emerald-700 bg-emerald-100 text-xs font-bold px-3 py-1 rounded-full">الحمدللہ مطمئن کسٹمرز</span>
+        <h3 class="text-2xl font-black text-slate-900 mt-2">ہمارے کسٹمرز کی زبانی سچی آراء</h3>
+        <p class="text-xs text-slate-500 mt-1">پاکستان بھر سے 15,000+ سے زائد لوگ اس تیل سے مستفید ہو چکے ہیں</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <!-- Review 1 -->
+        <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-2">★★★★★</div>
+            <p class="text-xs md:text-sm text-slate-700 leading-relaxed font-medium">
+              "پہلے نہاتے وقت مٹھی بھر بال گرتے تھے، میں ڈپریشن میں آ گیا تھا۔ یہ تیل صرف 12 دن استعمال کیا ہے، بالوں کا گرنا 80% تک بند ہو گیا ہے! زبردست چیز ہے۔"
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+            <span class="font-extrabold text-xs text-slate-900">محمد اسد علی</span>
+            <span class="text-[11px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">لاہور (Verified Buyer)</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-2">★★★★★</div>
+            <p class="text-xs md:text-sm text-slate-700 leading-relaxed font-medium">
+              "میرے آگے کے بال بہت سفید ہو رہے تھے جس کی وجہ سے بار بار ڈائی لگاتی تھی۔ اس تیل کے مساج سے بالوں میں قدرتی چمک آ گئی ہے اور گرنا تو بالکل رک گیا ہے۔"
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+            <span class="font-extrabold text-xs text-slate-900">شازیہ بی بی</span>
+            <span class="text-[11px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">کراچی (Verified Buyer)</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-2">★★★★★</div>
+            <p class="text-xs md:text-sm text-slate-700 leading-relaxed font-medium">
+              "کیش آن ڈیلیوری پر منگوایا تھا، 3 دن میں پارسل مل گیا۔ تیل کی خوشبو خالص جڑی بوٹیوں والی ہے، چپچپا بھی نہیں ہوتا۔ داڑھی کے لیے بھی بہت اچھا کام کر رہا ہے۔"
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+            <span class="font-extrabold text-xs text-slate-900">وقاص احمد خان</span>
+            <span class="text-[11px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-bold">راولپنڈی (Verified Buyer)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Limited Time Deal Banner & Countdown Box -->
+    <section id="deal-section" class="bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-600 rounded-3xl p-6 md:p-8 text-white shadow-xl mb-10 text-center relative overflow-hidden">
+      
+      <div class="inline-block bg-white text-amber-900 font-black text-xs px-4 py-1 rounded-full uppercase tracking-wider mb-3 shadow">
+        محدود مدت کی رعایتی آفر (Limited Time Deal)
+      </div>
+
+      <h3 class="text-2xl md:text-4xl font-black mb-2 text-white">
+        کیمیکل والے مہنگے ٹریٹمنٹس پر ہزاروں روپے ضائع نہ کریں!
+      </h3>
+      <p class="text-amber-100 text-sm max-w-lg mx-auto mb-6">
+        اپنے بالوں کو دیں ایک مکمل، محفوظ اور خالص قدرتی زندگی۔
+      </p>
+
+      <!-- Countdown Timer Box -->
+      <div class="bg-black/30 backdrop-blur-md rounded-2xl p-4 max-w-md mx-auto mb-6 border border-white/20">
+        <p class="text-xs text-amber-200 font-bold mb-2">خصوصی ڈسکاؤنٹ ختم ہونے میں باقی وقت:</p>
+        <div class="grid grid-cols-3 gap-2 text-center" id="countdown">
+          <div class="bg-white/10 rounded-xl p-2 border border-white/10">
+            <span id="hours" class="block font-black text-2xl text-yellow-300">04</span>
+            <span class="text-[10px] text-stone-200">گھنٹے</span>
+          </div>
+          <div class="bg-white/10 rounded-xl p-2 border border-white/10">
+            <span id="minutes" class="block font-black text-2xl text-yellow-300">38</span>
+            <span class="text-[10px] text-stone-200">منٹ</span>
+          </div>
+          <div class="bg-white/10 rounded-xl p-2 border border-white/10">
+            <span id="seconds" class="block font-black text-2xl text-yellow-300">45</span>
+            <span class="text-[10px] text-stone-200">سیکنڈ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Comparison -->
+      <div class="flex items-center justify-center gap-6 my-4">
+        <div class="text-right">
+          <span class="block text-xs text-amber-200">مارکیٹ اصل قیمت:</span>
+          <span class="text-xl md:text-2xl text-amber-200 line-through decoration-red-900 decoration-4 font-bold">2,500 روپے</span>
+        </div>
+        <div class="h-10 w-[1.5px] bg-white/30"></div>
+        <div class="text-right">
+          <span class="block text-xs text-yellow-200 font-bold">آج کی ڈسکاؤنٹ قیمت:</span>
+          <span class="text-3xl md:text-5xl font-black text-white drop-shadow-md">1,499 <span class="text-lg">روپے</span></span>
+        </div>
+      </div>
+
+      <!-- Delivery info badge -->
+      <div class="inline-flex items-center gap-2 bg-emerald-950/80 text-emerald-300 border border-emerald-400/30 px-4 py-2 rounded-xl text-xs md:text-sm font-bold mt-2">
+        <span>🚚</span>
+        <span>پورے پاکستان میں فری کیش آن ڈیلیوری (Free COD) — پیسے پارسل وصول کرتے وقت ادا کریں!</span>
+      </div>
+    </section>
+
+    <!-- Direct Order Booking Form -->
+    <section id="order-section" class="bg-white rounded-3xl p-6 md:p-8 border-2 border-emerald-500 shadow-2xl mb-12 relative">
+      
+      <div class="text-center mb-6">
+        <span class="bg-emerald-600 text-white font-black text-xs px-4 py-1 rounded-full shadow">
+          آسان اور تیز ترین آرڈر بکنگ
+        </span>
+        <h3 class="text-2xl md:text-3xl font-black text-slate-900 mt-2">
+          آرڈر بک کرنے کے لیے فارم پُر کریں
+        </h3>
+        <p class="text-xs md:text-sm text-slate-500 mt-1">
+          یا نیچے دیے گئے واٹس ایپ بٹن پر کلک کر کے براہِ راست آرڈر کریں
+        </p>
+      </div>
+
+      <!-- Bundle Package Selection (Pakistani Buyer Psychology: Bulk Savings) -->
+      <div class="mb-6">
+        <label class="block text-sm font-extrabold text-slate-800 mb-2">اپنی مرضی کا پیکیج منتخب کریں:</label>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          
+          <!-- Deal 1 -->
+          <label class="package-option cursor-pointer border-2 border-emerald-500 bg-emerald-50/50 rounded-2xl p-4 flex flex-col justify-between transition-all relative">
+            <input type="radio" name="package" value="1" checked class="hidden" onchange="updateSelectedPackage(1, 1499, '1 بوتل')">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-black text-slate-900 text-sm">1 بوتل (Standard)</span>
+              <span class="w-4 h-4 rounded-full border-2 border-emerald-600 bg-emerald-600 flex items-center justify-center check-dot">
+                <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+              </span>
+            </div>
+            <p class="text-xs text-slate-500 mb-2">1 ماہ کا مکمل کورس</p>
+            <div class="text-emerald-900 font-extrabold text-lg">1,499 روپے</div>
+            <span class="text-[10px] text-emerald-700 font-semibold">+ مفت ہوم ڈیلیوری</span>
+          </label>
+
+          <!-- Deal 2 (Best Seller) -->
+          <label class="package-option cursor-pointer border-2 border-stone-200 bg-white hover:border-emerald-300 rounded-2xl p-4 flex flex-col justify-between transition-all relative">
+            <span class="absolute -top-2.5 right-3 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full">سب سے زیادہ مقبول</span>
+            <input type="radio" name="package" value="2" class="hidden" onchange="updateSelectedPackage(2, 2599, '2 بوتلیں (ڈبل بچت)')">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-black text-slate-900 text-sm">2 بوتلیں (ڈبل پیک)</span>
+              <span class="w-4 h-4 rounded-full border-2 border-stone-300 flex items-center justify-center check-dot"></span>
+            </div>
+            <p class="text-xs text-slate-500 mb-2">400 روپے مزید بچائیں</p>
+            <div class="text-emerald-900 font-extrabold text-lg">2,599 روپے</div>
+            <span class="text-[10px] text-emerald-700 font-semibold">+ مفت ہوم ڈیلیوری</span>
+          </label>
+
+          <!-- Deal 3 (Family Pack) -->
+          <label class="package-option cursor-pointer border-2 border-stone-200 bg-white hover:border-emerald-300 rounded-2xl p-4 flex flex-col justify-between transition-all relative">
+            <input type="radio" name="package" value="3" class="hidden" onchange="updateSelectedPackage(3, 3599, '3 بوتلیں (فیملی پیک)')">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-black text-slate-900 text-sm">3 بوتلیں (فیملی پیک)</span>
+              <span class="w-4 h-4 rounded-full border-2 border-stone-300 flex items-center justify-center check-dot"></span>
+            </div>
+            <p class="text-xs text-slate-500 mb-2">مرد و خواتین سب کے لیے</p>
+            <div class="text-emerald-900 font-extrabold text-lg">3,599 روپے</div>
+            <span class="text-[10px] text-emerald-700 font-semibold">+ مفت ہوم ڈیلیوری</span>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Checkout Form Fields -->
+      <form id="orderForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">آپ کا پورا نام *</label>
+          <input type="text" id="custName" required placeholder="مثلاً: محمد احمد خان" 
+                 class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none text-sm transition">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">موبائل / واٹس ایپ نمبر *</label>
+          <input type="tel" id="custPhone" required placeholder="مثلاً: 03001234567" 
+                 class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none text-sm transition text-left" dir="ltr">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">شہر کا نام *</label>
+          <input type="text" id="custCity" required placeholder="مثلاً: لاہور، کراچی، اسلام آباد، ملتان وغیرہ" 
+                 class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none text-sm transition">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">مکمل ڈیلیوری پتہ (محلہ، گلی نمبر، مکان نمبر) *</label>
+          <textarea id="custAddress" required rows="2" placeholder="گھر کا مکمل پتہ لکھیں تاکہ پارسل آسانی سے پہنچ سکے" 
+                    class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-200 outline-none text-sm transition"></textarea>
+        </div>
+
+        <!-- Total Price Summary Box -->
+        <div class="bg-stone-50 border border-stone-200 rounded-2xl p-4 flex items-center justify-between text-sm">
+          <div>
+            <span class="block font-bold text-slate-700">کل رقم (Cash on Delivery):</span>
+            <span class="text-xs text-emerald-700 font-semibold">ہوم ڈیلیوری: مفت (Free)</span>
+          </div>
+          <div class="text-2xl font-black text-emerald-900" id="totalDisplayPrice">
+            1,499 روپے
+          </div>
+        </div>
+
+        <!-- Submit Buttons: 1 Direct WhatsApp Order, 1 Form Submit -->
+        <div class="space-y-3 pt-2">
+          
+          <!-- Primary WhatsApp Quick Checkout Button -->
+          <button type="submit" 
+                  class="pulse-btn w-full bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.98] text-white font-black py-4 px-6 rounded-2xl shadow-lg flex items-center justify-center gap-3 text-base md:text-lg transition cursor-pointer">
+            <!-- WhatsApp SVG Icon -->
+            <svg class="w-7 h-7 fill-current flex-shrink-0" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-12.416c-5.514 0-10 4.486-10 10 0 1.956.564 3.784 1.545 5.34l-1.635 5.972 6.13-1.609c1.503.882 3.25 1.391 5.094 1.391 5.514 0 10-4.486 10-10s-4.486-10-10-10z"/>
+            </svg>
+            <span>واٹس ایپ پر آرڈر بک کریں (کیش آن ڈیلیوری)</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Trust note below form -->
+      <div class="mt-6 pt-4 border-t border-stone-200 grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-[11px] text-slate-600 font-bold">
+        <div class="flex items-center justify-center gap-1">
+          <span>📦</span>
+          <span>کھول کر تسلی کریں</span>
+        </div>
+        <div class="flex items-center justify-center gap-1">
+          <span>💵</span>
+          <span>کیش آن ڈیلیوری</span>
+        </div>
+        <div class="flex items-center justify-center gap-1">
+          <span>⚡</span>
+          <span>2 سے 3 دن میں ترسیل</span>
+        </div>
+        <div class="flex items-center justify-center gap-1">
+          <span>📞</span>
+          <span>24/7 کسٹمر سپورٹ</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white rounded-3xl p-6 border border-stone-200 mb-12 shadow-sm">
+      <h3 class="text-xl font-black text-slate-900 mb-4 text-center">عام پوچھے جانے والے سوالات (FAQ)</h3>
+      
+      <div class="space-y-3">
+        <details class="group bg-stone-50 p-4 rounded-2xl cursor-pointer">
+          <summary class="font-extrabold text-sm text-slate-800 list-none flex items-center justify-between">
+            <span>کیا اس تیل کا کوئی سائیڈ ایفیکٹ ہے؟</span>
+            <span class="text-emerald-700 transition group-open:rotate-180">▼</span>
+          </summary>
+          <p class="text-xs md:text-sm text-slate-600 mt-2 leading-relaxed">
+            جی بالکل نہیں! یہ تیل 100% دیسی جڑی بوٹیوں سے کولڈ پریس (Cold Pressed) طریقے سے تیار کیا گیا ہے، جس میں کوئی کیمیکل، منرل آئل یا مصنوعی رنگ شامل نہیں ہے۔
+          </p>
+        </details>
+
+        <details class="group bg-stone-50 p-4 rounded-2xl cursor-pointer">
+          <summary class="font-extrabold text-sm text-slate-800 list-none flex items-center justify-between">
+            <span>کتنے دنوں میں بالوں کا گرنا رک جاتا ہے؟</span>
+            <span class="text-emerald-700 transition group-open:rotate-180">▼</span>
+          </summary>
+          <p class="text-xs md:text-sm text-slate-600 mt-2 leading-relaxed">
+            ہمارے 90% کسٹمرز کو پہلے 7 سے 10 دنوں کے مسلسل استعمال سے واضح فرق نظر آتا ہے اور بال جڑ سے مضبوط ہو کر گرنا بند ہو جاتے ہیں۔
+          </p>
+        </details>
+
+        <details class="group bg-stone-50 p-4 rounded-2xl cursor-pointer">
+          <summary class="font-extrabold text-sm text-slate-800 list-none flex items-center justify-between">
+            <span>استعمال کا صحیح طریقہ کیا ہے؟</span>
+            <span class="text-emerald-700 transition group-open:rotate-180">▼</span>
+          </summary>
+          <p class="text-xs md:text-sm text-slate-600 mt-2 leading-relaxed">
+            ہفتے میں 3 سے 4 بار، رات کو سونے سے پہلے چند قطرے کھوپڑی اور بالوں کی جڑوں میں ہلکے ہاتھوں سے 5 منٹ مساج کریں۔ صبح کسی بھی معیاری کیمیکل فری شیمپو سے دھو لیں۔
+          </p>
+        </details>
+
+        <details class="group bg-stone-50 p-4 rounded-2xl cursor-pointer">
+          <summary class="font-extrabold text-sm text-slate-800 list-none flex items-center justify-between">
+            <span>کیا پارسل آنے پر پہلے چیک کر سکتے ہیں؟</span>
+            <span class="text-emerald-700 transition group-open:rotate-180">▼</span>
+          </summary>
+          <p class="text-xs md:text-sm text-slate-600 mt-2 leading-relaxed">
+            جی ہاں! ڈیلیوری رائیڈر سے پارسل تسلی کے ساتھ وصول کریں اور رقم ادا کریں۔ پورے پاکستان میں ڈیلیوری بالکل مفت ہے۔
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Footer Information -->
+    <footer class="text-center text-xs text-slate-500 space-y-2 border-t border-stone-200 pt-6">
+      <p class="font-semibold text-slate-700">خالص آرگینک ہربل کیئر پاکستان</p>
+      <p>واٹس ایپ ہیلپ لائن: <span dir="ltr" class="font-bold text-slate-800">0309-7700123</span></p>
+      <p class="text-[11px] text-slate-400">تمام حقوق محفوظ ہیں۔ یہ پروڈکٹ خالص قدرتی نباتات سے تیار کردہ ہے۔</p>
+    </footer>
+
+  </main>
+
+  <!-- Sticky Bottom Quick Action Bar for Mobile Conversions -->
+  <div class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-stone-300 p-3 z-50 shadow-2xl flex items-center justify-between gap-3 max-w-3xl mx-auto">
+    <div class="flex flex-col">
+      <span class="text-[10px] text-slate-500 font-bold">ڈسکاؤنٹ آفر + فری ڈلیوری:</span>
+      <span class="text-lg font-black text-emerald-900" id="stickyPriceText">صرف 1,499 روپے</span>
+    </div>
+    
+    <div class="flex items-center gap-2">
+      <!-- Direct WhatsApp icon button -->
+      <a href="https://wa.me/923097700123?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85!%20%D9%85%D8%AC%DA%BE%DB%92%20%D8%AE%D8%A7%D9%84%D8%B5%20%D8%A2%D8%B1%DA%AF%DB%8C%D9%86%DA%A9%20%DB%81%DB%8C%D8%A6%D8%B1%20%D8%A2%D8%A6%D9%84%20%DA%A9%DB%8C%D8%B4%20%D8%A2%D9%86%20%DA%88%DB%8C%D9%84%DB%8C%D9%88%D8%B1%DB%8C%20%D9%BE%D8%B1%20%D8%A2%D8%B1%DA%88%D8%B1%20%DA%A9%D8%B1%D9%86%D8%A7%20%DB%81%DB%92%DB%94" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         title="واٹس ایپ پر رابطہ کریں" 
+         class="bg-[#25D366] hover:bg-[#1faa53] text-white p-3 rounded-xl flex items-center justify-center shadow-md">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-12.416c-5.514 0-10 4.486-10 10 0 1.956.564 3.784 1.545 5.34l-1.635 5.972 6.13-1.609c1.503.882 3.25 1.391 5.094 1.391 5.514 0 10-4.486 10-10s-4.486-10-10-10z"/>
+        </svg>
+      </a>
+
+      <!-- Jump to Order form button -->
+      <a href="#order-section" class="bg-gradient-to-r from-emerald-700 to-emerald-800 hover:from-emerald-800 hover:to-emerald-900 text-white font-black py-3 px-5 rounded-xl text-xs md:text-sm shadow-md flex items-center gap-1.5 transition">
+        <span>🛒</span>
+        <span>ابھی آرڈر کریں</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Live Sales Popup Toast (Creates intense FOMO & Social Proof) -->
+  <div id="salesToast" class="fixed bottom-20 right-4 max-w-xs bg-white rounded-2xl shadow-2xl p-3 border border-emerald-300 z-50 hidden flex items-center gap-3 transition-all duration-300">
+    <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg flex-shrink-0">
+      📦
+    </div>
+    <div class="text-right">
+      <p class="text-xs font-bold text-slate-800" id="toastCustomer">محمد رضوان (فیصل آباد)</p>
+      <p class="text-[11px] text-emerald-700">نے ابھی 1 آرڈر کیش آن ڈیلیوری پر بک کیا</p>
+      <span class="text-[9px] text-slate-400 block" id="toastTime">2 منٹ پہلے</span>
+    </div>
+  </div>
+
+  <script>
+    // State variables
+    let currentPackage = {
+      qty: 1,
+      price: 1499,
+      name: '1 بوتل (Arooj Organics Hair Vibe 260ml)'
+    };
+
+    const WHATSAPP_PHONE = '923097700123'; // 0309-7700123 in clean WhatsApp format
+
+    // Package Selector logic
+    function updateSelectedPackage(qty, price, name) {
+      currentPackage = { qty, price, name };
+      
+      // Update price display
+      document.getElementById('totalDisplayPrice').innerText = price.toLocaleString('en-US') + ' روپے';
+      document.getElementById('stickyPriceText').innerText = 'صرف ' + price.toLocaleString('en-US') + ' روپے';
+
+      // Update styling of radio container cards
+      const options = document.querySelectorAll('.package-option');
+      options.forEach(opt => {
+        opt.classList.remove('border-emerald-500', 'bg-emerald-50/50');
+        opt.classList.add('border-stone-200', 'bg-white');
+        const dot = opt.querySelector('.check-dot');
+        if (dot) {
+          dot.innerHTML = '';
+          dot.className = 'w-4 h-4 rounded-full border-2 border-stone-300 flex items-center justify-center check-dot';
+        }
+      });
+
+      // Highlight active
+      const activeOption = event.currentTarget.closest('.package-option');
+      if (activeOption) {
+        activeOption.classList.remove('border-stone-200', 'bg-white');
+        activeOption.classList.add('border-emerald-500', 'bg-emerald-50/50');
+        const activeDot = activeOption.querySelector('.check-dot');
+        if (activeDot) {
+          activeDot.className = 'w-4 h-4 rounded-full border-2 border-emerald-600 bg-emerald-600 flex items-center justify-center check-dot';
+          activeDot.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-white"></span>';
+        }
+      }
+    }
+
+    // Handles form submission and prepares formatted Urdu WhatsApp message
+    function handleFormSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const city = document.getElementById('custCity').value.trim();
+      const address = document.getElementById('custAddress').value.trim();
+
+      if (!name || !phone || !city || !address) {
+        alert('براہ کرم تمام خانے مکمل پُر کریں۔');
+        return;
+      }
+
+      // Pre-filled WhatsApp message formatted with full Pakistani customer psychology
+      const message = 
+`السلام علیکم! میں نے عروج آرگینکس (Arooj Organics Hair Vibe) ہیئر آئل کی آفر دیکھی ہے اور کیش آن ڈیلیوری پر آرڈر بک کرنا چاہتا/چاہتی ہوں۔
+
+📦 *پیکیج تفصیل:* ${currentPackage.name}
+💰 *کل رقم:* ${currentPackage.price} روپے (فری ہوم ڈیلیوری)
+👤 *گاہک کا نام:* ${name}
+📱 *موبائل نمبر:* ${phone}
+🏙️ *شہر:* ${city}
+📍 *مکمل ڈیلیوری پتہ:* ${address}
+
+برائے مہربانی میرا یہ آرڈر فوراً کنفرم فرما دیں۔ شکریہ!`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodedMessage}`;
+
+      // Open WhatsApp in new tab or app
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Live Countdown Timer (Minutes & Seconds Loop)
+    let totalSeconds = (4 * 3600) + (38 * 60) + 45;
+    function updateCountdown() {
+      if (totalSeconds <= 0) {
+        totalSeconds = 4 * 3600; // Reset loop
+      }
+      totalSeconds--;
+
+      const h = Math.floor(totalSeconds / 3600);
+      const m = Math.floor((totalSeconds % 3600) / 60);
+      const s = totalSeconds % 60;
+
+      document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+      document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+      document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+    }
+    setInterval(updateCountdown, 1000);
+
+    // Live Social Proof Notification Popups
+    const sampleBuyers = [
+      { name: "محمد رضوان", city: "فیصل آباد", time: "2 منٹ پہلے" },
+      { name: "طارق جاوید", city: "لاہور", time: "5 منٹ پہلے" },
+      { name: "عائشہ ملک", city: "اسلام آباد", time: "1 منٹ پہلے" },
+      { name: "عدنان شاہ", city: "پشاور", time: "4 منٹ پہلے" },
+      { name: "فرحان قریشی", city: "ملتان", time: "7 منٹ پہلے" },
+      { name: "کامران خان", city: "راولپنڈی", time: "3 منٹ پہلے" }
+    ];
+
+    let buyerIdx = 0;
+    const toast = document.getElementById('salesToast');
+    const toastCustomer = document.getElementById('toastCustomer');
+    const toastTime = document.getElementById('toastTime');
+
+    function showRandomSale() {
+      const buyer = sampleBuyers[buyerIdx];
+      toastCustomer.innerText = `${buyer.name} (${buyer.city})`;
+      toastTime.innerText = buyer.time;
+
+      toast.classList.remove('hidden');
+      toast.classList.add('slide-in-toast');
+
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('slide-in-toast');
+      }, 5000);
+
+      buyerIdx = (buyerIdx + 1) % sampleBuyers.length;
+    }
+
+    // Trigger first toast after 3 seconds, then every 14 seconds
+    setTimeout(() => {
+      showRandomSale();
+      setInterval(showRandomSale, 14000);
+    }, 3000);
+  </script>
+</body>
+</html>
